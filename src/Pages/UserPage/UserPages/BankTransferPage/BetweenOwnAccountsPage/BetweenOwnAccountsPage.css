@@ -1,0 +1,35 @@
+.BOAP-content {
+    display: grid;
+    grid-template-areas:
+        "selectFrom selectTo"
+        "amount amount"
+        "details details"
+        "send send";
+    justify-content: center;
+    align-items: center;
+}
+
+.BOAP-selectFrom {
+    grid-area: selectFrom;
+}
+
+.BOAP-selectTo {
+    grid-area: selectTo;
+}
+
+.BOAP-amount {
+    grid-area: amount;
+    height: 30px;
+    font-size: 20px;
+}
+.BOAP-amount:focus {
+    margin: -2px -2px -2px -2px;
+}
+
+.BOAP-details {
+    grid-area: details;
+}
+
+.BOAP-transfer-amount {
+    grid-area: send;
+}

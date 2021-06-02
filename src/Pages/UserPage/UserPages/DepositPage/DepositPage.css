@@ -1,0 +1,17 @@
+.DepositPage-deposit {
+    width: 200px;
+    margin: auto;
+}
+.DepositPage-depositInfo {
+}
+
+.DepositPage-createDeposit {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 50px 100px 100px;
+    padding-bottom: 10px;
+}

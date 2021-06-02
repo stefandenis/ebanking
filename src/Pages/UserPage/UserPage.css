@@ -1,0 +1,62 @@
+.HomePage-container {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.HomePage-navbar {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(88, 81, 81, 0.438);
+    flex: 1;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+.HomePage-content {
+    display: flex;
+    flex: 3;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.HomePage-navbar__link {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    padding: 50px;
+    height: 100%;
+    border-top: 1px solid rgba(88, 81, 81, 0.438);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.HomePage-navbar__link:hover {
+    background-color: rgba(209, 209, 209, 0.438);
+}
+
+.HomePage-navbar__username {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 10px 0px 10px 0px;
+}
+
+.HomePage-navbar__link:focus {
+    color: black;
+}
+
+.HomePage-navbar__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.HomePage-navbar__link:focus {
+    background-color: rgba(129, 118, 118, 0.514);
+}

@@ -1,0 +1,16 @@
+.AUP-input {
+    margin-bottom: 15px;
+    width: 50%;
+}
+
+/* .AUP-input:focus {
+    margin: -2px -2px 9px -2px;
+} */
+.AUP-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}

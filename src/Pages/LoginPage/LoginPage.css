@@ -1,0 +1,20 @@
+.LoginPage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.LoginPage-window {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: -1px -2px 15px -6px #000000;
+    box-shadow: -1px -2px 15px -6px #000000;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.LoginPage-window__input {
+    margin-bottom: 15px;
+    height: 20px;
+}

@@ -1,0 +1,10 @@
+.TAFP-content {
+    display: grid;
+    grid-template-areas:
+        "TAFP-selectFrom TAFP-selectCATRE TAFP-selectTo"
+        "TAFP-amount TAFP-amount"
+        "TAFP-details TAFP-details"
+        "TAFP-send TAFP-send";
+    justify-content: center;
+    align-items: center;
+}
