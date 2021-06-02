@@ -192,48 +192,17 @@ function ExchangeRatePage() {
     function exchangeRate(amount: any) {
         axios
             .get(
-                "http://api.exchangeratesapi.io/v1/latest?access_key=161b98301d0e3f31e5eeb91cad645858&symbols=USD,RON"
+                `https://free.currconv.com/api/v7/convert?q=${currencyDebited}_${currencyCredited}&apiKey=c456163688d957944adc`
             )
             .then((response) => {
-                var usd = response.data.rates.USD;
-                var ron = response.data.rates.RON;
-                console.log(usd);
-                var finalAmount;
-                if (currencyDebited == "RON") {
-                    if (currencyCredited == "RON") {
-                        setAmountCredited(amount);
-                    } else if (currencyCredited == "EUR") {
-                        finalAmount = amount / ron;
-                        setAmountCredited(finalAmount.toString());
-                    } else if (currencyCredited == "USD") {
-                        finalAmount = (amount * usd) / ron;
-                        setAmountCredited(finalAmount.toString());
-                    }
-                }
-
-                if (currencyDebited == "EUR") {
-                    if (currencyCredited == "RON") {
-                        finalAmount = amount * ron;
-                        setAmountCredited(finalAmount.toString());
-                    } else if (currencyCredited == "EUR") {
-                        setAmountCredited(amount);
-                    } else if (currencyCredited == "USD") {
-                        finalAmount = amount * usd;
-                        setAmountCredited(finalAmount.toString());
-                    }
-                }
-
-                if (currencyDebited == "USD") {
-                    if (currencyCredited == "RON") {
-                        finalAmount = (amount * ron) / usd;
-                        setAmountCredited(finalAmount.toString());
-                    } else if (currencyCredited == "EUR") {
-                        finalAmount = amount / usd;
-                        setAmountCredited(finalAmount.toString());
-                    } else if (currencyCredited == "USD") {
-                        setAmountCredited(amount);
-                    }
-                }
+                console.log(response.data.results);
+                setAmountCredited(
+                    (
+                        response.data.results[
+                            Object.keys(response.data.results)[0]
+                        ].val * amount
+                    ).toString()
+                );
             });
     }
     return (
